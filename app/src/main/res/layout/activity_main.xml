@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/mainfont"
+            android:text="@string/Title"
+            android:textColor="@color/title"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="27dp"
+            android:paddingTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbl_FirstName"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="First Name"
+                android:fontFamily="@font/mainfont"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+            <EditText
+                android:enabled="true"
+                android:id="@+id/txt_FirstName"
+                android:layout_width="match_parent"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:textCursorDrawable="@drawable/cursor_style"
+                android:background="@drawable/input_txt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:autofillHints="name"
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/lbl_MiddleName"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mainfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Middle Name"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+            <EditText
+                android:enabled="true"
+                android:id="@+id/txt_MiddleName"
+                android:layout_width="match_parent"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:textCursorDrawable="@drawable/cursor_style"
+                android:background="@drawable/input_txt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:autofillHints="name"
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/lbl_LastName"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mainfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Last Name"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+            <EditText
+                android:enabled="true"
+                android:id="@+id/txt_LastName"
+                android:layout_width="match_parent"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:textCursorDrawable="@drawable/cursor_style"
+                android:background="@drawable/input_txt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:autofillHints="name"
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/lbl_gender"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mainfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Gender"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+            <Spinner
+                android:backgroundTint="@color/title"
+                android:id="@+id/sp_gender"
+                android:layout_marginTop="5dp"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+
+                        android:id="@+id/lbl_day"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/mainfont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="DAY (DOB)"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="15sp"/>
+                    <EditText
+                        android:enabled="true"
+                        android:maxLength="2"
+                        android:id="@+id/txt_day"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textCursorDrawable="@drawable/cursor_style"
+                        android:background="@drawable/input_txt"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:inputType="number"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+
+                        android:id="@+id/lbl_year"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/mainfont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="YEAR (DOB)"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="15sp"/>
+                    <Spinner
+                        android:id="@+id/sp_year"
+                        android:layout_marginTop="5dp"
+                        android:textSize="20sp"
+
+                        android:backgroundTint="@color/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+
+                android:id="@+id/lbl_month"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mainfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="MONTH (DOB)"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+            <Spinner
+                android:backgroundTint="@color/title"
+                android:id="@+id/sp_month"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+
+                android:id="@+id/lbl_profile"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mainfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Upload Image"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/ic_baseline_image_24"
+                    android:contentDescription="Profile Picture" />
+
+                <Button
+                    android:id="@+id/btn_upload"
+                    android:layout_gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/title"
+                    android:layout_marginBottom="5dp"
+                    android:text="Upload"
+                    android:textColor="@color/white"
+                    android:drawableTintMode="screen"
+                    android:foregroundTint="@color/title"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/title"
+                android:text="Submit"
+                android:textColor="@color/black"
+                android:fontFamily="@font/mainfont"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
